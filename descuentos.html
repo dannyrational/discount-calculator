@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descuentos</title>
+    <link rel="stylesheet" href="tailwind.css">
+</head>
+
+<body class="h-screen bg-white">
+    <div class="grid grid-cols-12 gap-4 place-content-center mx-auto h-full max-w-[1024px]">
+        <h1 class="col-span-12 mb-8 text-gray-500 font-bold text-3xl text-center">Discount Calculator</h1>
+
+        <!-- Image -->
+        <div class="col-span-12 p-3 md:col-span-6 flex justify-center">
+            <img src="savings-img.png" alt="">
+        </div>
+
+        <!-- Calculator -->
+        <div class="col-span-12 p-3 md:col-span-6 text-gray-500 flex flex-col ">
+            <h2 class="mb-4 text-gray-500 text-center md:text-left">Calculate the price to pay for your products after
+                discount</h2>
+            <div class="">
+                <form action="" class="flex flex-col py-2 px-4 bg-purple-600 rounded-tl-xl rounded-tr-xl">
+                    <label for="inputPrice" class="text-white">Product Price:</label>
+                    <input type="number" name="inputPrice" id="inputPrice" class="mb-4 rounded"
+                        oninput="priceDiscountOutput()">
+                    <label for="inputDiscount" class="text-white">Discount Percentage:</label>
+                    <input type="number" name="inputDiscount" id="inputDiscount" class="mb-3 rounded"
+                        oninput="priceDiscountOutput()">
+                </form>
+                <div class="bg-purple-900 text-white py-2 px-4 rounded-bl-xl rounded-br-xl">
+                    <p class="font-semibold uppercase">Savings: <span id="resultSavings" class="float-right"></span></p>
+                    <p class="font-semibold uppercase">Final Price: <span id="resultPrice" class="float-right"></span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="descuentos.js"></script>
+</body>
+
+</html>
