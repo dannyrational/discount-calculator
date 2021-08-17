@@ -22,5 +22,5 @@ function priceDiscountOutput() {
     let savings = priceValue - priceWithDiscount;
     savings = savings.toFixed(2)
 
-    document.querySelector('#resultSavings').innerHTML = savings
+    document.querySelector('#resultSavings').innerHTML = `- ${savings}`
 }

@@ -5,33 +5,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Descuentos</title>
+    <meta name="description" content="A simple discount calculator for any product">
+    <title>Discount Calculator</title>
     <link rel="stylesheet" href="tailwind.css">
 </head>
 
 <body class="h-screen bg-white">
-    <div class="grid grid-cols-12 gap-4 place-content-center mx-auto h-full max-w-[1024px]">
-        <h1 class="col-span-12 mb-8 text-gray-500 font-bold text-3xl text-center">Discount Calculator</h1>
+    <div class="grid grid-cols-12 gap-4 place-content-center mx-auto h-full max-w-[640px] lg:max-w-[1024px]">
 
         <!-- Image -->
-        <div class="col-span-12 p-3 md:col-span-6 flex justify-center">
-            <img src="savings-img.png" alt="">
+        <div class="col-span-12 p-3 lg:col-span-6 flex items-center justify-center text-gray-500">
+            <img class="w-[401px] lg:w-full" src="savings-img-2.png" alt="">
         </div>
 
         <!-- Calculator -->
-        <div class="col-span-12 p-3 md:col-span-6 text-gray-500 flex flex-col ">
-            <h2 class="mb-4 text-gray-500 text-center md:text-left">Calculate the price to pay for your products after
-                discount</h2>
+        <div class="col-span-12 p-3 lg:col-span-6 text-gray-500 flex flex-col justify-center">
+            <h1 class="col-span-12 font-bold text-3xl text-center lg:text-left">Discount Calculator</h1>
+            <h2 class="mb-4 text-gray-500 text-center lg:text-left text-lg">A simple discount calculator for any
+                product. Try it!
+            </h2>
+            <p class="text-sm text-center lg:text-left">Created by: <a href="https://www.dannyrational.com"
+                    target="_blank"
+                    class="inline-block font-medium hover:text-purple-500 transition-colors duration-200">Danny
+                    Rodas</a></p>
+            <p class="text-sm text-center lg:text-left mb-8">Last Edited: <span class="inline-block font-medium">Aug 8,
+                    2021</span></p>
             <div class="">
-                <form action="" class="flex flex-col py-2 px-4 bg-purple-600 rounded-tl-xl rounded-tr-xl">
-                    <label for="inputPrice" class="text-white">Product Price:</label>
+                <form action="" class="flex flex-col py-2 px-4 bg-purple-600 rounded-tl-md rounded-tr-md">
+                    <label for="inputPrice" class="text-white mb-1">Product Price:</label>
                     <input type="number" name="inputPrice" id="inputPrice" class="mb-4 rounded"
                         oninput="priceDiscountOutput()">
-                    <label for="inputDiscount" class="text-white">Discount Percentage:</label>
+                    <label for="inputDiscount" class="text-white mb-1">Discount Percentage:</label>
                     <input type="number" name="inputDiscount" id="inputDiscount" class="mb-3 rounded"
                         oninput="priceDiscountOutput()">
                 </form>
-                <div class="bg-purple-900 text-white py-2 px-4 rounded-bl-xl rounded-br-xl">
+                <div class="bg-purple-900 text-white py-2 px-4 rounded-bl-md rounded-br-md">
                     <p class="font-semibold uppercase">Savings: <span id="resultSavings" class="float-right"></span></p>
                     <p class="font-semibold uppercase">Final Price: <span id="resultPrice" class="float-right"></span>
                     </p>
