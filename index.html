@@ -33,11 +33,11 @@
             <div class="">
                 <form action="" class="flex flex-col py-2 px-4 bg-purple-600 rounded-tl-md rounded-tr-md">
                     <label for="inputPrice" class="text-white mb-1">Product Price:</label>
-                    <input type="number" name="inputPrice" id="inputPrice" class="mb-4 rounded"
+                    <input type="number" inputmode="numeric" name="inputPrice" id="inputPrice" class="mb-4 rounded"
                         oninput="myModule.priceDiscountOutput()">
                     <label for="inputDiscount" class="text-white mb-1">Discount Percentage:</label>
-                    <input type="number" name="inputDiscount" id="inputDiscount" class="mb-3 rounded"
-                        oninput="myModule.priceDiscountOutput()">
+                    <input type="number" inputmode="numeric" name="inputDiscount" id="inputDiscount"
+                        class="mb-3 rounded" oninput="myModule.priceDiscountOutput()">
                 </form>
                 <div class="bg-purple-900 text-white py-2 px-4 rounded-bl-md rounded-br-md">
                     <p class="font-semibold uppercase">Savings: <span id="resultSavings" class="float-right"></span></p>
