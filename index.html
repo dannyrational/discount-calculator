@@ -10,36 +10,36 @@
     <link rel="stylesheet" href="tailwind.css">
 </head>
 
-<body class="lg:h-screen py-20 lg:py-0 bg-white">
+<body class="py-20 bg-white lg:h-screen lg:py-0">
     <div class="grid grid-cols-12 gap-4 place-content-center mx-auto h-full max-w-[640px] lg:max-w-[1024px]">
 
         <!-- Image -->
-        <div class="col-span-12 p-3 lg:col-span-6 flex items-center justify-center text-gray-500">
+        <div class="flex items-center justify-center col-span-12 p-3 text-gray-500 lg:col-span-6">
             <img class="w-[401px] lg:w-full" src="savings-img-2.png" alt="">
         </div>
 
         <!-- Calculator -->
-        <div class="col-span-12 p-3 lg:col-span-6 text-gray-500 flex flex-col justify-center">
-            <h1 class="col-span-12 font-bold text-3xl text-center lg:text-left">Discount Calculator</h1>
-            <h2 class="mb-4 text-gray-500 text-center lg:text-left text-lg">A simple discount calculator for any
+        <div class="flex flex-col justify-center col-span-12 p-3 text-gray-500 lg:col-span-6">
+            <h1 class="col-span-12 text-3xl font-bold text-center lg:text-left">Discount Calculator</h1>
+            <h2 class="mb-4 text-lg text-center text-gray-500 lg:text-left">A simple discount calculator for any
                 product. Try it!
             </h2>
             <p class="text-sm text-center lg:text-left">Created by: <a href="https://www.dannyrational.com"
-                    target="_blank"
-                    class="inline-block font-medium hover:text-purple-500 transition-colors duration-200">Danny
+                    target="_blank" rel="noopener"
+                    class="inline-block font-medium transition-colors duration-200 hover:text-purple-500">Danny
                     Rodas</a></p>
-            <p class="text-sm text-center lg:text-left mb-8">Last Edited: <span class="inline-block font-medium">Aug 17,
+            <p class="mb-8 text-sm text-center lg:text-left">Last Edited: <span class="inline-block font-medium">Aug 17,
                     2021</span></p>
             <div class="">
-                <form action="" class="flex flex-col py-2 px-4 bg-purple-600 rounded-tl-md rounded-tr-md">
-                    <label for="inputPrice" class="text-white mb-1">Product Price:</label>
+                <form action="" class="flex flex-col px-4 py-2 bg-purple-600 rounded-tl-md rounded-tr-md">
+                    <label for="inputPrice" class="mb-1 text-white">Product Price:</label>
                     <input type="number" inputmode="numeric" name="inputPrice" id="inputPrice" class="mb-4 rounded"
                         oninput="myModule.priceDiscountOutput()">
-                    <label for="inputDiscount" class="text-white mb-1">Discount Percentage:</label>
+                    <label for="inputDiscount" class="mb-1 text-white">Discount Percentage:</label>
                     <input type="number" inputmode="numeric" name="inputDiscount" id="inputDiscount"
                         class="mb-3 rounded" oninput="myModule.priceDiscountOutput()">
                 </form>
-                <div class="bg-purple-900 text-white py-2 px-4 rounded-bl-md rounded-br-md">
+                <div class="px-4 py-2 text-white bg-purple-900 rounded-bl-md rounded-br-md">
                     <p class="font-semibold uppercase">Savings: <span id="resultSavings" class="float-right"></span></p>
                     <p class="font-semibold uppercase">Final Price: <span id="resultPrice" class="float-right"></span>
                     </p>
